@@ -11,8 +11,6 @@ import org.codehaus.plexus.util.FileUtils
  */
 public class EasybMojo extends GroovyMojo
 {
-    def builder = new IncludesBuilder()
-
     /**
     * @parameter expression="${project}"
     * @required
