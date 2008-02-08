@@ -1,0 +1,62 @@
+OUT: -------------------------------------------------------------------------------
+OUT: TEST BUILD: /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/pom.xml
+OUT: Goals: clean install
+OUT: -------------------------------------------------------------------------------
+OUT: + Error stacktraces are turned on.
+OUT: [INFO] Scanning for projects...
+OUT: [INFO] ------------------------------------------------------------------------
+OUT: [INFO] Building Unnamed - org.disco.easyb:single-story-test:jar:testing
+OUT: [INFO]    task-segment: [clean, install]
+OUT: [INFO] ------------------------------------------------------------------------
+OUT: [INFO] [clean:clean]
+OUT: [INFO] Deleting directory /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/target
+OUT: [INFO] Deleting directory /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/target/classes
+OUT: [INFO] Deleting directory /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/target/test-classes
+OUT: [INFO] [resources:resources]
+OUT: [INFO] Using default encoding to copy filtered resources.
+OUT: Downloading: http://worf:8080/archiva/repository/internal/easyb/easyb/0.6/easyb-0.6.pom
+OUT: Downloading: http://worf:8080/archiva/repository/snapshots/easyb/easyb/0.6/easyb-0.6.pom
+OUT: [INFO] [compiler:compile]
+OUT: [INFO] No sources to compile
+OUT: [INFO] [resources:testResources]
+OUT: [INFO] Using default encoding to copy filtered resources.
+OUT: [INFO] [compiler:testCompile]
+OUT: [INFO] No sources to compile
+OUT: [INFO] [surefire:test]
+OUT: [INFO] No tests to run.
+OUT: [INFO] [easyb:test {execution: default}]
+OUT: /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/src/test/story/FailingStory.groovy
+OUT: /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/src/test/story/PassingStory.groovy
+OUT: 8 behavior steps run , but status is failure! Total failures: 1
+OUT: 	Failure -> then outcome in FailingStory.groovy
+OUT: 	VerificationException: the expression evaluated to false: 
+OUT: 	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)	
+OUT: 	sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)	
+OUT: 	sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)	
+OUT: 	java.lang.reflect.Method.invoke(Method.java:585)	
+OUT: 	org.codehaus.groovy.runtime.metaclass.ReflectionMetaMethod.invoke(ReflectionMetaMethod.java:56)	
+OUT: 	org.codehaus.groovy.runtime.MetaClassHelper.doMethodInvoke(MetaClassHelper.java:599)	
+OUT: 	org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:337)	
+OUT: 	org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnCurrentN(ScriptBytecodeAdapter.java:75)	
+OUT: 	FailingStory$_run_closure3.doCall(FailingStory.groovy:13)	
+OUT: 	sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)	
+OUT: specification failures detected!
+OUT: Java Result: 250
+OUT: [INFO] [jar:jar]
+OUT: [WARNING] JAR will be empty - no content was marked for inclusion!
+OUT: [INFO] Building jar: /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/target/single-story-test-testing.jar
+OUT: [INFO] [install:install]
+OUT: [INFO] Installing /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/target/single-story-test-testing.jar to /Users/rcoffin/.m2/repository/org/disco/easyb/single-story-test/testing/single-story-test-testing.jar
+OUT: [INFO] ------------------------------------------------------------------------
+OUT: [INFO] BUILD SUCCESSFUL
+OUT: [INFO] ------------------------------------------------------------------------
+OUT: [INFO] Total time: 5 seconds
+OUT: [INFO] Finished at: Fri Feb 08 07:48:18 CST 2008
+OUT: [INFO] Final Memory: 8M/17M
+OUT: [INFO] ------------------------------------------------------------------------
+OUT: -------------------------------------------------------------------------------
+OUT: -------------------------------------------------------------------------------
+OUT: SCRIPT (validate): /Users/rcoffin/Development/src/easyb/maven-plugins/maven-easyb-plugin/src/it/basic-test/validate.groovy
+OUT: -------------------------------------------------------------------------------
+OUT: SUCCESS
+OUT: -------------------------------------------------------------------------------
