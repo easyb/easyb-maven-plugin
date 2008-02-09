@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>easyb</groupId>
-  <artifactId>report-location-test</artifactId>
+  <artifactId>story-report-location-test</artifactId>
   <version>testing</version>
-  <description>Tests the default report location can be changed</description>
+  <description>Tests the story report location can be changed</description>
 
   <dependencies>
     <dependency>
@@ -50,7 +50,7 @@
           </execution>
         </executions>
         <configuration>
-          <behaviorReport>${project.build.directory}/easyb-report.xml</behaviorReport>
+          <storyReport>${project.build.directory}/easyb-stories.txt</storyReport>
         </configuration>
       </plugin>
       <plugin>

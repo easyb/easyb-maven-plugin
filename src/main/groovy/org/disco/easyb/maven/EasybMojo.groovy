@@ -46,6 +46,7 @@ public class EasybMojo extends GroovyMojo
         def files = FileUtils.getFiles(storyDirectory, includes, '')
 
         new File(behaviorReport).parentFile.mkdirs()
+        new File(storyReport).parentFile.mkdirs()
         ant.java(classname: 'org.disco.easyb.SpecificationRunner') {
             classpath() {
                 project.getTestClasspathElements().each {element ->
