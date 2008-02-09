@@ -3,7 +3,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.disco.easyb</groupId>
+  <groupId>easyb</groupId>
   <artifactId>report-location-test</artifactId>
   <version>testing</version>
   <description>Tests the default report location can be changed</description>
@@ -38,7 +38,7 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.disco.easyb</groupId>
+        <groupId>easyb</groupId>
         <artifactId>maven-easyb-plugin</artifactId>
         <version>testing</version>
         <executions>
@@ -50,7 +50,7 @@
           </execution>
         </executions>
         <configuration>
-          <reportFile>${project.build.directory}/easyb-report.xml</reportFile>
+          <behaviorReport>${project.build.directory}/easyb-report.xml</behaviorReport>
         </configuration>
       </plugin>
       <plugin>

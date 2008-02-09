@@ -22,7 +22,7 @@ public class EasybMojo extends GroovyMojo
     * @parameter expression="${project.build.directory}/easyb/report.xml"
     * @required
     */
-    String reportFile
+    String behaviorReport
 
     /**
     * @parameter expression="${project.basedir}/src/test/story"
@@ -39,7 +39,7 @@ public class EasybMojo extends GroovyMojo
     void execute() {
         def files = FileUtils.getFiles(storyDirectory, includes, '')
 
-        new File(reportFile).parentFile.mkdirs()
+        new File(behaviorReport).parentFile.mkdirs()
         ant.java(classname: 'org.disco.easyb.SpecificationRunner') {
             classpath() {
                 project.getTestClasspathElements().each {element ->
@@ -51,7 +51,7 @@ public class EasybMojo extends GroovyMojo
                 arg(value: story.getAbsolutePath())
             }
             arg(value: '-xmlbehavior')
-            arg(value: reportFile)
+            arg(value: behaviorReport)
         }
     }
 }

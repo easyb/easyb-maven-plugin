@@ -3,7 +3,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.disco.easyb</groupId>
+  <groupId>easyb</groupId>
   <artifactId>stack-stories-test</artifactId>
   <version>testing</version>
   <description>Tests the stack examples from the easyb site</description>
@@ -38,7 +38,7 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.disco.easyb</groupId>
+        <groupId>easyb</groupId>
         <artifactId>maven-easyb-plugin</artifactId>
         <version>testing</version>
         <executions>
