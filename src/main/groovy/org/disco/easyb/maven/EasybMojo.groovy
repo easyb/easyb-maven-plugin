@@ -25,6 +25,12 @@ public class EasybMojo extends GroovyMojo
     String behaviorReport
 
     /**
+    * @parameter expression="${project.build.directory}/easyb/stories.txt"
+    * @required
+    */
+    String storyReport
+
+    /**
     * @parameter expression="${project.basedir}/src/test/story"
     * @required
     */
@@ -52,6 +58,8 @@ public class EasybMojo extends GroovyMojo
             }
             arg(value: '-xmlbehavior')
             arg(value: behaviorReport)
+            arg(value: '-txtstory')
+            arg(value: storyReport)
         }
     }
 }
