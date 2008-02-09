@@ -31,10 +31,10 @@ public class EasybMojo extends GroovyMojo
     String storyReport
 
     /**
-    * @parameter expression="${project.basedir}/src/test/story"
+    * @parameter expression="${project.basedir}/src/test/easyb"
     * @required
     */
-    File storyDirectory
+    File easybTestDirectory
 
     /**
     * Ant path-style expression of files to run as story tests.  Defaults to '**\/*Story.groovy'.
@@ -43,7 +43,7 @@ public class EasybMojo extends GroovyMojo
     String includes
 
     void execute() {
-        def files = FileUtils.getFiles(storyDirectory, includes, '')
+        def files = FileUtils.getFiles(easybTestDirectory, includes, '')
 
         new File(behaviorReport).parentFile.mkdirs()
         new File(storyReport).parentFile.mkdirs()

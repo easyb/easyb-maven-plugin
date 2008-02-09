@@ -1,5 +1,5 @@
 // Verify behavior report
-behaviorReport = new File('src/it/stack-stories-test/target/easyb/report.xml')
+behaviorReport = new File('src/it/site-examples-test/target/easyb/report.xml')
 assert behaviorReport.exists()
 
 def results = new XmlParser().parse(behaviorReport)
@@ -7,7 +7,7 @@ assert '19' == results.'@totalrun'
 assert '0' == results.'@totalfailed'
 
 // Verify story printing
-storyReport = new File('src/it/stack-stories-test/target/easyb/stories.txt')
+storyReport = new File('src/it/site-examples-test/target/easyb/stories.txt')
 assert storyReport.text ==
 '''19 behavior steps executed successfully  
   Story: empty stack

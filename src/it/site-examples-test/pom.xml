@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>easyb</groupId>
-  <artifactId>stack-stories-test</artifactId>
+  <artifactId>guide-examples-test</artifactId>
   <version>testing</version>
-  <description>Tests the stack examples from the easyb site</description>
+  <description>Tests the examples from the easyb site</description>
 
   <dependencies>
     <dependency>
