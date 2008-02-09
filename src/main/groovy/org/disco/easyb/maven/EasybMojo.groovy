@@ -11,56 +11,63 @@ import org.codehaus.plexus.util.FileUtils
  */
 public class EasybMojo extends GroovyMojo
 {
-    /**
-    * @parameter expression="${project}"
-    * @required
-    * @readonly
-    */
-    MavenProject project
+  /**
+  * @parameter expression="${project}"
+  * @required
+  * @readonly
+  */
+  MavenProject project
 
-    /**
-    * @parameter expression="${project.build.directory}/easyb/report.xml"
-    * @required
-    */
-    String behaviorReport
+  /**
+  * @parameter expression="${project.build.directory}/easyb/report.xml"
+  * @required
+  */
+  String behaviorReport
 
-    /**
-    * @parameter expression="${project.build.directory}/easyb/stories.txt"
-    * @required
-    */
-    String storyReport
+  /**
+  * @parameter expression="${project.build.directory}/easyb/stories.txt"
+  * @required
+  */
+  String storyReport
 
-    /**
-    * @parameter expression="${project.basedir}/src/test/easyb"
-    * @required
-    */
-    File easybTestDirectory
+  /**
+  * @parameter expression="${project.basedir}/src/test/easyb"
+  * @required
+  */
+  File easybTestDirectory
 
-    /**
-    * Ant path-style expression of files to run as story tests.  Defaults to '**\/*Story.groovy'.
-    * @parameter expression="${easyb.includes}" default-value="**\/*Story.groovy"
-    */
-    String includes
+  /**
+  * Ant path-style expression of files to run as story tests.
+  * Defaults to <code>**\/*Story.groovy **\/*Behavior.groovy</code>.
+  * @parameter
+  */
+  List<String> includes
 
-    void execute() {
-        def files = FileUtils.getFiles(easybTestDirectory, includes, '')
+  void execute() {
+    if (includes == null)
+      includes = ['**/*Story.groovy', '**/*Behavior.groovy']
 
-        new File(behaviorReport).parentFile.mkdirs()
-        new File(storyReport).parentFile.mkdirs()
-        ant.java(classname: 'org.disco.easyb.SpecificationRunner') {
-            classpath() {
-                project.getTestClasspathElements().each {element ->
-                    pathelement(location: element)
-                }
-            }
-            files.each {File story ->
-                println story.getAbsolutePath()
-                arg(value: story.getAbsolutePath())
-            }
-            arg(value: '-xmlbehavior')
-            arg(value: behaviorReport)
-            arg(value: '-txtstory')
-            arg(value: storyReport)
-        }
+    def includedFiles = []
+    includes.each {include ->
+      includedFiles += FileUtils.getFiles(easybTestDirectory, include, '')
     }
+
+    new File(behaviorReport).parentFile.mkdirs()
+    new File(storyReport).parentFile.mkdirs()
+    ant.java(classname: 'org.disco.easyb.SpecificationRunner') {
+      classpath() {
+        project.getTestClasspathElements().each {element ->
+          pathelement(location: element)
+        }
+      }
+      includedFiles.each {File story ->
+        println story.getAbsolutePath()
+        arg(value: story.getAbsolutePath())
+      }
+      arg(value: '-xmlbehavior')
+      arg(value: behaviorReport)
+      arg(value: '-txtstory')
+      arg(value: storyReport)
+    }
+  }
 }
