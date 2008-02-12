@@ -104,7 +104,13 @@
         </executions>
         <configuration>
           <flags>-DeasybVersion=0.7a</flags>
+          <!-- This makes the build a tad faster -->
           <parallel>true</parallel>
+          <!--
+            The SHITTY plugin doesn't seem to have a mechansim for expected failure, so ignore this by default.
+            Comment out the below line to run all tests.
+           -->
+          <tests>behavior-report-location-test,site-examples-test,story-report-location-test</tests>
         </configuration>
       </plugin>
     </plugins>

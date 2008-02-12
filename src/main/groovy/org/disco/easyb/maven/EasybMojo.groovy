@@ -44,24 +44,16 @@ public class EasybMojo extends GroovyMojo
   List<String> includes
 
   void execute() {
-    if (includes == null)
-      includes = ['**/*Story.groovy', '**/*Behavior.groovy']
+    defaultParameters()
+    makeReportDirectories()
 
-    def includedFiles = []
-    includes.each {include ->
-      includedFiles += FileUtils.getFiles(easybTestDirectory, include, '')
-    }
-
-    new File(behaviorReport).parentFile.mkdirs()
-    new File(storyReport).parentFile.mkdirs()
-    ant.java(classname: 'org.disco.easyb.SpecificationRunner') {
+    ant.java(classname: 'org.disco.easyb.SpecificationRunner', fork: true) {
       classpath() {
         project.getTestClasspathElements().each {element ->
           pathelement(location: element)
         }
       }
-      includedFiles.each {File story ->
-        println story.getAbsolutePath()
+      includedTests().each {File story ->
         arg(value: story.getAbsolutePath())
       }
       arg(value: '-xmlbehavior')
@@ -69,5 +61,27 @@ public class EasybMojo extends GroovyMojo
       arg(value: '-txtstory')
       arg(value: storyReport)
     }
+
+    def totalfailed = new XmlParser().parse(behaviorReport).'@totalfailed'
+    if ('0' != totalfailed)
+      fail("${totalfailed} bevhaiors failed")
+  }
+
+  def defaultParameters() {
+    if (includes == null)
+      includes = ['**/*Story.groovy', '**/*Behavior.groovy']
+  }
+
+  def makeReportDirectories() {
+    new File(behaviorReport).parentFile.mkdirs()
+    new File(storyReport).parentFile.mkdirs()
+  }
+
+  def includedTests() {
+    def includedFiles = []
+    includes.each {include ->
+      includedFiles += FileUtils.getFiles(easybTestDirectory, include, '')
+    }
+    return includedFiles
   }
 }
