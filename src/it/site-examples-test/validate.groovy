@@ -1,5 +1,5 @@
 // Verify behavior report
-behaviorReport = new File('src/it/site-examples-test/target/easyb/report.xml')
+behaviorReport = new File("${basedir}/target/easyb/report.xml")
 assert behaviorReport.exists()
 
 def results = new XmlParser().parse(behaviorReport)
@@ -7,9 +7,9 @@ assert '21' == results.'@totalrun'
 assert '0' == results.'@totalfailed'
 
 // Verify story printing
-storyReport = new File('src/it/site-examples-test/target/easyb/stories.txt')
+storyReport = new File("${basedir}/target/easyb/stories.txt")
 assert storyReport.text ==
-'''21 behavior steps executed successfully  
+'''21 behavior steps executed successfully
   Story: empty stack
     scenario null is pushed onto empty stack
       given an empty stack

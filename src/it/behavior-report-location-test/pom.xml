@@ -12,7 +12,7 @@
     <dependency>
       <groupId>easyb</groupId>
       <artifactId>easyb</artifactId>
-      <version>0.6</version>
+      <version>${easybVersion}</version>
       <scope>test</scope>
     </dependency>
     <!-- Begin Easyb dependencies -->

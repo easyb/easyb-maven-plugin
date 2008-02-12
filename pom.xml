@@ -50,7 +50,7 @@
     <dependency>
       <groupId>easyb</groupId>
       <artifactId>easyb</artifactId>
-      <version>0.6</version>
+      <version>0.7a</version>
     </dependency>
     <!-- Begin Easyb dependencies -->
     <dependency>
@@ -102,6 +102,10 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <flags>-DeasybVersion=0.7a</flags>
+          <parallel>true</parallel>
+        </configuration>
       </plugin>
     </plugins>
   </build>
