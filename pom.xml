@@ -8,6 +8,8 @@
   <packaging>maven-plugin</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Easyb Maven Plugin</name>
+  <description>A Maven plugin for running behavior driven stories and behaviors with easyb</description>
+  <url>http://www.easyb.org</url>
 
   <developers>
     <developer>
@@ -42,9 +44,38 @@
   </repositories>
 
   <scm>
-    <connection>scm:svn:http://svn.rodcoffin.com/flow-sim/maven-easyb-plugin/</connection>
-    <developerConnection>scm:svn:http://svn.rodcoffin.com/flow-sim/maven-easyb-plugin/</developerConnection>
+    <connection>scm:svn:http://easyb.googlecode.com/svn/trunk/</connection>
+    <developerConnection>scm:svn:https://easyb.googlecode.com/svn/trunk/</developerConnection>
   </scm>
+
+  <mailingLists>
+    <mailingList>
+      <name>easyb users</name>
+      <archive>http://groups.google.com/group/easyb-users</archive>
+      <subscribe>http://groups.google.com/group/easyb-users</subscribe>
+      <unsubscribe>http://groups.google.com/group/easyb-users</unsubscribe>
+      <post>http://groups.google.com/group/easyb-users</post>
+    </mailingList>
+    <mailingList>
+      <name>easyb dev</name>
+      <archive>http://groups.google.com/group/easyb-dev</archive>
+      <subscribe>http://groups.google.com/group/easyb-dev</subscribe>
+      <unsubscribe>http://groups.google.com/group/easyb-dev</unsubscribe>
+      <post>http://groups.google.com/group/easyb-dev</post>
+    </mailingList>
+    <mailingList>
+      <name>easyb commits</name>
+      <archive>http://groups.google.com/group/easyb-commits</archive>
+      <subscribe>http://groups.google.com/group/easyb-commits</subscribe>
+      <unsubscribe>http://groups.google.com/group/easyb-commits</unsubscribe>
+      <post>http://groups.google.com/group/easyb-commits</post>
+    </mailingList>
+  </mailingLists>
+
+  <issueManagement>
+    <system>Google Code</system>
+    <url>http://code.google.com/p/easyb/issues/</url>
+  </issueManagement>
 
   <dependencies>
     <dependency>
@@ -115,5 +146,14 @@
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
