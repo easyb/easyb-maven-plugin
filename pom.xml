@@ -79,7 +79,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>easyb</groupId>
+      <groupId>org.easyb</groupId>
       <artifactId>easyb</artifactId>
       <version>0.7a</version>
     </dependency>
