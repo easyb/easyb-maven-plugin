@@ -8,6 +8,13 @@
   <version>testing</version>
   <description>Tests that test source directory and includes can be customized</description>
 
+  <repositories>
+    <repository>
+      <id>easyb</id>
+      <url>http://www.easyb.org/repo/</url>
+    </repository>
+  </repositories>
+
   <dependencies>
     <dependency>
       <groupId>org.easyb</groupId>

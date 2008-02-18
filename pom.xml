@@ -116,7 +116,7 @@
           </execution>
         </executions>
         <configuration>
-          <flags>-DeasybVersion=0.7a</flags>
+          <flags>-DeasybVersion=0.7</flags>
           <!-- This makes the build a tad faster -->
           <parallel>true</parallel>
         </configuration>
