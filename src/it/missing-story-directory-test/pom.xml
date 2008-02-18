@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.easyb</groupId>
-  <artifactId>story-report-location-test</artifactId>
+  <artifactId>missing-story-directory-test</artifactId>
   <version>testing</version>
-  <description>Tests the story report location can be changed</description>
+  <description>Tests that the plugin doesn't fail the build when the easyb test directory does not exist</description>
 
   <dependencies>
     <dependency>
@@ -30,9 +30,6 @@
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <storyReport>${project.build.directory}/easyb-stories.txt</storyReport>
-        </configuration>
       </plugin>
     </plugins>
   </build>

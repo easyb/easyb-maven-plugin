@@ -3,10 +3,10 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>easyb</groupId>
-  <artifactId>failing-behaviors-test</artifactId>
+  <groupId>org.easyb</groupId>
+  <artifactId>no-tests-found-test</artifactId>
   <version>testing</version>
-  <description>Verifies failing behaviors</description>
+  <description>Tests that the plugin doesn't fail the build when no tests match the include pattern</description>
 
   <dependencies>
     <dependency>
@@ -30,13 +30,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.5</source>
-          <target>1.5</target>
-        </configuration>
       </plugin>
     </plugins>
   </build>

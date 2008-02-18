@@ -46,6 +46,16 @@ public class EasybMojo extends GroovyMojo
 
   void execute() {
     defaultParameters()
+
+    if (!easybTestDirectory.exists()) {
+      log.info("$easybTestDirectory does not exists.  Skipping easyb testing")
+      return
+    }
+    if (includedTests().isEmpty()) {
+      log.info("No tests discovered in easyb test directory.  Skipping easyb testing")
+      return
+    }
+
     makeReportDirectories()
 
     ant.java(classname: 'org.disco.easyb.SpecificationRunner', fork: true) {

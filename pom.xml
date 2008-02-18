@@ -119,10 +119,6 @@
           <flags>-DeasybVersion=0.7a</flags>
           <!-- This makes the build a tad faster -->
           <parallel>true</parallel>
-          <!--
-            Expected failures is a current limitation of the SHITTY plugin: http://jira.codehaus.org/browse/MSHITTY-11
-           -->
-          <tests>behavior-report-location-test,site-examples-test,story-report-location-test</tests>
         </configuration>
       </plugin>
     </plugins>
