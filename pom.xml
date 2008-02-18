@@ -1,11 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.easyb</groupId>
   <artifactId>maven-easyb-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>0.8-SNAPSHOT</version>
+  <version>0.7-SNAPSHOT</version>
   <name>Easyb Maven Plugin</name>
   <description>A Maven plugin for running behavior driven stories and behaviors with easyb</description>
   <url>http://www.easyb.org</url>
