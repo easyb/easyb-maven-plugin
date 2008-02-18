@@ -47,6 +47,20 @@
     <developerConnection>scm:svn:https://easyb.googlecode.com/svn/trunk/</developerConnection>
   </scm>
 
+  <distributionManagement>
+    <repository>
+      <!-- Since we're not taking advantage of automatic deployment yet, just deploy to the target directory -->
+      <id>target</id>
+      <name>target repository</name>
+      <url>file:./target/deploy</url>
+    </repository>
+    <site>
+      <id>target</id>
+      <name>target repository</name>
+      <url>file:./target/deploy-site</url>
+    </site>
+  </distributionManagement>
+
   <mailingLists>
     <mailingList>
       <name>easyb users</name>
@@ -123,14 +137,5 @@
       </plugin>
     </plugins>
   </build>
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-plugin-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </reporting>
 
 </project>
