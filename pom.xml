@@ -38,8 +38,7 @@
   <repositories>
     <repository>
       <id>easyb</id>
-      <url>http://www.thediscoblog.com/repo/</url>
-      <layout>legacy</layout>
+      <url>http://www.easyb.org/repo/</url>
     </repository>
   </repositories>
 
@@ -79,20 +78,9 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.easyb</groupId>
-      <artifactId>easyb</artifactId>
-      <version>0.7a</version>
-    </dependency>
-    <dependency>
       <groupId>org.codehaus.mojo.groovy</groupId>
       <artifactId>groovy-mojo-support</artifactId>
       <version>1.0-beta-3</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.4</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 
