@@ -3,7 +3,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>easyb</groupId>
+  <groupId>org.easyb</groupId>
   <artifactId>story-report-location-test</artifactId>
   <version>testing</version>
   <description>Tests the story report location can be changed</description>
@@ -20,12 +20,11 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>easyb</groupId>
+        <groupId>org.easyb</groupId>
         <artifactId>maven-easyb-plugin</artifactId>
         <version>testing</version>
         <executions>
           <execution>
-            <phase>test</phase>
             <goals>
               <goal>test</goal>
             </goals>

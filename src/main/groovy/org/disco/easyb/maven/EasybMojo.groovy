@@ -8,6 +8,7 @@ import org.codehaus.plexus.util.FileUtils
  * Execute story specifications defined with easyb
  *
  * @goal test
+ * @phase test
  */
 public class EasybMojo extends GroovyMojo
 {

@@ -20,12 +20,11 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>easyb</groupId>
+        <groupId>org.easyb</groupId>
         <artifactId>maven-easyb-plugin</artifactId>
         <version>testing</version>
         <executions>
           <execution>
-            <phase>test</phase>
             <goals>
               <goal>test</goal>
             </goals>

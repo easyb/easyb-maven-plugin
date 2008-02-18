@@ -3,10 +3,10 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>easyb</groupId>
+  <groupId>org.easyb</groupId>
   <artifactId>maven-easyb-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.7-SNAPSHOT</version>
   <name>Easyb Maven Plugin</name>
   <description>A Maven plugin for running behavior driven stories and behaviors with easyb</description>
   <url>http://www.easyb.org</url>
@@ -120,8 +120,7 @@
           <!-- This makes the build a tad faster -->
           <parallel>true</parallel>
           <!--
-            The SHITTY plugin doesn't seem to have a mechansim for expected failure, so ignore this by default.
-            Comment out the below line to run all tests.
+            Expected failures is a current limitation of the SHITTY plugin: http://jira.codehaus.org/browse/MSHITTY-11
            -->
           <tests>behavior-report-location-test,site-examples-test,story-report-location-test</tests>
         </configuration>
