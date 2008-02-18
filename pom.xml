@@ -5,7 +5,7 @@
   <groupId>org.easyb</groupId>
   <artifactId>maven-easyb-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <version>0.7</version>
+  <version>0.8-SNAPSHOT</version>
   <name>Easyb Maven Plugin</name>
   <description>A Maven plugin for running behavior driven stories and behaviors with easyb</description>
   <url>http://www.easyb.org</url>
@@ -42,8 +42,8 @@
   </repositories>
 
   <scm>
-    <connection>scm:svn:http://easyb.googlecode.com/svn/tags/maven-easyb-plugin-0.7</connection>
-    <developerConnection>scm:svn:https://easyb.googlecode.com/svn/tags/maven-easyb-plugin-0.7</developerConnection>
+    <connection>scm:svn:http://easyb.googlecode.com/svn/trunk/</connection>
+    <developerConnection>scm:svn:https://easyb.googlecode.com/svn/trunk/</developerConnection>
   </scm>
 
   <mailingLists>
