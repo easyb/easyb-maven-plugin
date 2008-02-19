@@ -14,6 +14,12 @@
       <url>http://www.easyb.org/repo/</url>
     </repository>
   </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>easyb</id>
+      <url>http://www.easyb.org/repo/</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <dependencies>
     <dependency>
