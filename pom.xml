@@ -34,13 +34,6 @@
     </license>
   </licenses>
 
-  <repositories>
-    <repository>
-      <id>easyb</id>
-      <url>http://www.easyb.org/repo/</url>
-    </repository>
-  </repositories>
-
   <scm>
     <connection>scm:svn:http://easyb.googlecode.com/svn/trunk/</connection>
     <developerConnection>scm:svn:https://easyb.googlecode.com/svn/trunk/</developerConnection>
