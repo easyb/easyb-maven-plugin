@@ -10,8 +10,7 @@ import org.codehaus.plexus.util.FileUtils
  * @goal test
  * @phase test
  */
-public class EasybMojo extends GroovyMojo
-{
+public class EasybMojo extends GroovyMojo {
   /**
   * @parameter expression="${project}"
   * @required

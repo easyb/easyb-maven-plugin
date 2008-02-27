@@ -1,7 +1,7 @@
 // Verify build didn't produce any artifacts (since it should have failed)
 File targetDir = new File("${basedir}/target/")
 targetDir.eachFileMatch(~/.*jar/) {
-    assert false
+  assert false
 }
 
 def results = new XmlParser().parse("${basedir}/target/easyb/report.xml")

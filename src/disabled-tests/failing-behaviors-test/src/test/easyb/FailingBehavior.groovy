@@ -1,3 +1,3 @@
 it "should always fail", {
-    true.shouldBe(false)
+  true.shouldBe(false)
 }

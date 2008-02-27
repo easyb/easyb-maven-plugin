@@ -9,7 +9,7 @@ assert '0' == results.'@totalfailed'
 // Verify story printing
 storyReport = new File("${basedir}/target/easyb/stories.txt")
 assert storyReport.text ==
-'''21 behavior steps executed successfully
+        '''21 behavior steps executed successfully
   Story: empty stack
     scenario null is pushed onto empty stack
       given an empty stack
