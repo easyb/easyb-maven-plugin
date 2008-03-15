@@ -22,7 +22,7 @@ public class EasybMojo extends GroovyMojo {
   * @parameter expression="${project.build.directory}/easyb/report.xml"
   * @required
   */
-  String behaviorReport
+  String xmlReport
 
   /**
   * @parameter expression="${project.build.directory}/easyb/stories.txt"
@@ -50,8 +50,8 @@ public class EasybMojo extends GroovyMojo {
       log.info("$easybTestDirectory does not exists.  Skipping easyb testing")
       return
     }
-    if (includedTests().isEmpty()) {
-      log.info("No tests discovered in easyb test directory.  Skipping easyb testing")
+    if (includedSpecs().isEmpty()) {
+      log.info("No specifications discovered in easyb test directory.  Skipping easyb testing")
       return
     }
 
@@ -63,18 +63,18 @@ public class EasybMojo extends GroovyMojo {
           pathelement(location: element)
         }
       }
-      includedTests().each {File story ->
-        arg(value: story.getAbsolutePath())
+      includedSpecs().each {File spec ->
+        arg(value: spec.getAbsolutePath())
       }
-      arg(value: '-xmlbehavior')
-      arg(value: behaviorReport)
+      arg(value: '-xmleasyb')
+      arg(value: xmlReport)
       arg(value: '-txtstory')
       arg(value: storyReport)
     }
 
-    def totalfailed = new XmlParser().parse(behaviorReport).'@totalfailed'
+    def totalfailed = new XmlParser().parse(xmlReport).'@totalfailedspecifications'
     if ('0' != totalfailed)
-      fail("${totalfailed} bevhaiors failed")
+      fail("${totalfailed} specifications failed")
   }
 
   def defaultParameters() {
@@ -83,11 +83,11 @@ public class EasybMojo extends GroovyMojo {
   }
 
   def makeReportDirectories() {
-    new File(behaviorReport).parentFile.mkdirs()
+    new File(xmlReport).parentFile.mkdirs()
     new File(storyReport).parentFile.mkdirs()
   }
 
-  def includedTests() {
+  def includedSpecs() {
     def includedFiles = []
     includes.each {include ->
       includedFiles += FileUtils.getFiles(easybTestDirectory, include, '')
