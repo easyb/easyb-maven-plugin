@@ -38,7 +38,7 @@ public class EasybMojo extends GroovyMojo {
 
   /**
   * Ant path-style expression of files to run as story tests.
-  * Defaults to <code>**\/*Story.groovy **\/*Behavior.groovy</code>.
+  * Defaults to <code>**\/*Story.groovy **\/*Specification.groovy</code>.
   * @parameter
   */
   List<String> includes
@@ -57,7 +57,7 @@ public class EasybMojo extends GroovyMojo {
 
     makeReportDirectories()
 
-    ant.java(classname: 'org.disco.easyb.SpecificationRunner', fork: true) {
+    ant.java(classname: 'org.disco.easyb.BehaviorRunner', fork: true) {
       classpath() {
         project.getTestClasspathElements().each {element ->
           pathelement(location: element)
@@ -79,7 +79,7 @@ public class EasybMojo extends GroovyMojo {
 
   def defaultParameters() {
     if (includes == null)
-      includes = ['**/*Story.groovy', '**/*Behavior.groovy']
+      includes = ['**/*Story.groovy', '**/*Specification.groovy']
   }
 
   def makeReportDirectories() {

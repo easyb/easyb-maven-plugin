@@ -39,10 +39,6 @@
         </executions>
         <configuration>
           <easybTestDirectory>${basedir}/src/test/stories</easybTestDirectory>
-          <includes>
-            <include>**/Story*.groovy</include>
-            <include>**/Behavior*.groovy</include>
-          </includes>
         </configuration>
       </plugin>
     </plugins>
