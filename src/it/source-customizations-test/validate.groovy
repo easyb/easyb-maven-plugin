@@ -3,8 +3,8 @@ behaviorReport = new File("${basedir}/target/easyb/report.xml")
 assert behaviorReport.exists()
 
 def results = new XmlParser().parse(behaviorReport)
-assert '2' == results.'@totalspecifications'
-assert '0' == results.'@totalfailedspecifications'
+assert '2' == results.'@totalbehaviors'
+assert '0' == results.'@totalfailedbehaviors'
 
 // Verify story printing
 storyReport = new File("${basedir}/target/easyb/stories.txt")

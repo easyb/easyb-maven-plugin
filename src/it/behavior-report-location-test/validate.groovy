@@ -3,13 +3,13 @@ report = new File("${basedir}/target/easyb-report.xml")
 assert report.exists()
 
 def results = new XmlParser().parse(report)
-assert '1' == results.'@totalspecifications'
-assert '0' == results.'@totalfailedspecifications'
+assert '1' == results.'@totalbehaviors'
+assert '0' == results.'@totalfailedbehaviors'
 
 // Verify story printing
 storyReport = new File("${basedir}/target/easyb/stories.txt")
 assert storyReport.text ==
-        ''' 1 specification (including 0 pending) executed successfully
+        ''' 1 scenario (including 0 pending) executed successfully
 
 
   Story: simple

@@ -72,9 +72,9 @@ public class EasybMojo extends GroovyMojo {
       arg(value: storyReport)
     }
 
-    def totalfailed = new XmlParser().parse(xmlReport).'@totalfailedspecifications'
+    def totalfailed = new XmlParser().parse(xmlReport).'@totalfailedbehaviors'
     if ('0' != totalfailed)
-      fail("${totalfailed} specifications failed")
+      fail("${totalfailed} behaviors failed")
   }
 
   def defaultParameters() {
