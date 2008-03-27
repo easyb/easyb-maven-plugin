@@ -12,6 +12,29 @@
   <artifactId>maven-easyb-plugin</artifactId>
   <packaging>maven-plugin</packaging>
   <name>Easyb Maven Plugin</name>
-  <description>A Maven plugin for running behavior driven stories and behaviors with easyb</description>
+  <description>A Maven plugin for creating story reports</description>
+
+  <build>
+    <sourceDirectory>src/main/groovy</sourceDirectory>
+    <testSourceDirectory>src/test/groovy</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo.groovy</groupId>
+        <artifactId>groovy-maven-plugin</artifactId>
+        <version>1.0-beta-3</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generateStubs</goal>
+              <goal>compile</goal>
+              <goal>generateTestStubs</goal>
+              <goal>testCompile</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
 
 </project>
