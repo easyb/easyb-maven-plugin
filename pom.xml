@@ -16,9 +16,19 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.codehaus.mojo.groovy</groupId>
-      <artifactId>groovy-mojo-support</artifactId>
-      <version>1.0-beta-3</version>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>2.0.8</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-project</artifactId>
+      <version>2.0.8</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>1.5.4</version>
     </dependency>
     <dependency>
       <groupId>org.easyb</groupId>
@@ -29,9 +39,12 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>src/main/groovy</sourceDirectory>
-    <testSourceDirectory>src/test/groovy</testSourceDirectory>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>2.4.1</version>
+      </plugin>
       <plugin>
         <groupId>org.codehaus.mojo.groovy</groupId>
         <artifactId>groovy-maven-plugin</artifactId>
@@ -41,13 +54,21 @@
             <goals>
               <goal>generateStubs</goal>
               <goal>compile</goal>
-              <goal>generateTestStubs</goal>
-              <goal>testCompile</goal>
             </goals>
           </execution>
         </executions>
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>2.4.1</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
