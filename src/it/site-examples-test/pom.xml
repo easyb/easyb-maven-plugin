@@ -3,32 +3,15 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.easyb</groupId>
+  <parent>
+    <groupId>org.easyb</groupId>
+    <artifactId>maven-parent</artifactId>
+    <version>0.7.4-SNAPSHOT</version>
+  </parent>
+
   <artifactId>site-examples-test</artifactId>
   <version>testing</version>
   <description>Tests the examples from the easyb site</description>
-
-  <repositories>
-    <repository>
-      <id>easyb</id>
-      <url>http://www.easyb.org/repo/</url>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>easyb</id>
-      <url>http://www.easyb.org/repo/</url>
-    </pluginRepository>
-  </pluginRepositories>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.easyb</groupId>
-      <artifactId>easyb</artifactId>
-      <version>${easybVersion}</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
 
   <build>
     <plugins>
@@ -43,13 +26,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.5</source>
-          <target>1.5</target>
-        </configuration>
       </plugin>
     </plugins>
   </build>

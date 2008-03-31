@@ -9,9 +9,9 @@
     <version>0.7.4-SNAPSHOT</version>
   </parent>
 
-  <artifactId>behavior-report-location-test</artifactId>
+  <artifactId>html-story-behavior</artifactId>
   <version>testing</version>
-  <description>Tests the default report location can be changed</description>
+  <description>Tests that HTML story reports are created</description>
 
   <build>
     <plugins>
@@ -23,12 +23,10 @@
           <execution>
             <goals>
               <goal>test</goal>
+              <goal>storyReport</goal>
             </goals>
           </execution>
         </executions>
-        <configuration>
-          <xmlReport>${project.build.directory}/easyb-report.xml</xmlReport>
-        </configuration>
       </plugin>
     </plugins>
   </build>

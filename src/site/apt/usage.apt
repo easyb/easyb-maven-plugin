@@ -1,0 +1,97 @@
+Usage
+
+* Basic Configuration
+
+---
+ <dependencies>
+    <dependency>
+      <groupId>org.easyb</groupId>
+      <artifactId>easyb</artifactId>
+      <version>0.7.4</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.easyb</groupId>
+        <artifactId>maven-easyb-plugin</artifactId>
+        <version>testing</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+---
+
+* Customized Directories
+
+---
+ <dependencies>
+    <dependency>
+      <groupId>org.easyb</groupId>
+      <artifactId>easyb</artifactId>
+      <version>0.7.4</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.easyb</groupId>
+        <artifactId>maven-easyb-plugin</artifactId>
+        <version>testing</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <easybTestDirectory>${basedir}/src/test/stories</easybTestDirectory>
+          <storyReport>${project.build.directory}/easyb-stories.txt</storyReport>
+          <xmlReport>${project.build.directory}/easyb-report.xml</xmlReport>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+---
+
+* Creating HTML story reports
+
+---
+  <dependencies>
+    <dependency>
+      <groupId>org.easyb</groupId>
+      <artifactId>easyb</artifactId>
+      <version>0.7.4</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.easyb</groupId>
+        <artifactId>maven-easyb-plugin</artifactId>
+        <version>testing</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test</goal>
+              <goal>storyReport</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+---

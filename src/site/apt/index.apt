@@ -1,13 +1,8 @@
 Maven Easyb Plugin
 
   The Maven Easyb Plugin can be used to execute easyb stories and behaviors during the test lifecycle of a Maven build.
-  Failing stories or behaviors will fail the build.  Two reports can be optionally generated:
+  It can also optionally be used to create HTML representations of your easyb stories effectively allowing requirement
+  documentation to be generated from the stories definitions themselves.
 
-  * Story Report (.txt)
-
-  * Behavior Report (.xml)
-
-  []
-
-  See the easyb documentation for more information about defining stories and behaviors for more information on
-  these report types.
+  Full documentation of this plugin can be found on the {{{plugin-info.html}goals page}}\
+  Also, example usages can be seen on the {{{usage.html}usage page}}
