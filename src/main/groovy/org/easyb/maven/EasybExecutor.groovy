@@ -28,6 +28,9 @@ public class EasybExecutor {
                 mojo.project.getTestClasspathElements().each {element ->
                     pathelement(location: element)
                 }
+                mojo.easybDependencies().each {dependency ->
+                    pathelement(location: dependency)
+                }
             }
             includedSpecs().each {File spec ->
                 arg(value: spec.getAbsolutePath())

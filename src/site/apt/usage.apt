@@ -3,15 +3,6 @@ Usage
 * Basic Configuration
 
 ---
- <dependencies>
-    <dependency>
-      <groupId>org.easyb</groupId>
-      <artifactId>easyb</artifactId>
-      <version>0.7.4</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -33,15 +24,6 @@ Usage
 * Customized Directories
 
 ---
- <dependencies>
-    <dependency>
-      <groupId>org.easyb</groupId>
-      <artifactId>easyb</artifactId>
-      <version>0.7.4</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -68,15 +50,6 @@ Usage
 * Creating HTML story reports
 
 ---
-  <dependencies>
-    <dependency>
-      <groupId>org.easyb</groupId>
-      <artifactId>easyb</artifactId>
-      <version>0.7.4</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
   <build>
     <plugins>
       <plugin>
