@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.easyb</groupId>
     <artifactId>maven-parent</artifactId>
-    <version>0.7.4-SNAPSHOT</version>
+    <version>0.8-SNAPSHOT</version>
   </parent>
 
   <artifactId>site-examples-test</artifactId>

@@ -23,7 +23,7 @@ public class EasybExecutor {
 
         makeReportDirectories()
 
-        new AntBuilder().java(classname: 'org.disco.easyb.BehaviorRunner', fork: true) {
+        new AntBuilder(new AntProject()).java(classname: 'org.disco.easyb.BehaviorRunner', fork: true) {
             classpath() {
                 mojo.project.getTestClasspathElements().each {element ->
                     pathelement(location: element)
@@ -41,6 +41,11 @@ public class EasybExecutor {
         def totalfailed = new XmlParser().parse(mojo.xmlReport).'@totalfailedbehaviors'
         if ('0' != totalfailed)
             fail("${totalfailed} behaviors failed")
+    }
+
+    def String encode(def raw) {
+        URLEncoder encoder = new URLEncoder()
+        return encoder.encode(raw, "utf-8")
     }
 
     def defaultParameters() {
