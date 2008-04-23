@@ -87,7 +87,7 @@
           </execution>
         </executions>
         <configuration>
-          <flags>-DeasybVersion=0.8.1</flags>
+          <flags>-DeasybVersion=0.8</flags>
           <!-- This makes the build a tad faster -->
           <parallel>true</parallel>
         </configuration>
