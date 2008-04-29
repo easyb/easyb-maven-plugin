@@ -23,6 +23,9 @@ Usage
 
 * Customized Directories
 
+  The above example runs easyb with common defaults for test directories and report paths.  However, all of these
+  defaults can be overriden using plugin configuration as shown below:
+
 ---
   <build>
     <plugins>
