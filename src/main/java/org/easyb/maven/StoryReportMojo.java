@@ -1,16 +1,16 @@
 package org.easyb.maven;
 
+import org.apache.maven.plugin.AbstractMojo;
+import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.project.MavenProject;
+import org.disco.easyb.util.CamelCaseConverter;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
-
-import org.apache.maven.plugin.AbstractMojo;
-import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.project.MavenProject;
-import org.disco.easyb.util.CamelCaseConverter;
 
 /**
  * Generate a html report for stories defined with easyb
@@ -19,7 +19,8 @@ import org.disco.easyb.util.CamelCaseConverter;
  * @phase test
  */
 @SuppressWarnings("UnusedDeclaration")
-public class StoryReportMojo extends AbstractMojo {
+public class StoryReportMojo extends AbstractMojo
+{
     /**
      * @parameter expression="${project}"
      * @required
@@ -42,10 +43,11 @@ public class StoryReportMojo extends AbstractMojo {
      * @parameter expression="${project.build.directory}/easyb/report.xml"
      * @required
      */
-    private File easybReport;
+    private File xmlReport;
 
     @SuppressWarnings("RedundantCast")
-    public void execute() throws MojoExecutionException {
+    public void execute() throws MojoExecutionException
+    {
         if (!outputDirectory.exists()) {
             outputDirectory.mkdirs();
         }
@@ -53,7 +55,7 @@ public class StoryReportMojo extends AbstractMojo {
         FileInputStream reportStream = null;
         StoryReportWriter writer = new StoryReportWriter();
         try {
-            reportStream = new FileInputStream(easybReport);
+            reportStream = new FileInputStream(xmlReport);
             EasybReportReader reader = new EasybReportReader(reportStream);
             // This redundant cast is required due to some weirdness with the joint compiler
             for (Story story : (List<Story>) reader.getStories()) {
