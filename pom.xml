@@ -10,7 +10,7 @@
 
   <artifactId>maven-easyb-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <name>Easyb Maven Plugin</name>
+  <name>easyb Maven Plugin</name>
   <description>A Maven plugin for creating story reports</description>
 
   <dependencies>
