@@ -37,6 +37,7 @@
     <dependency>
       <groupId>org.easyb</groupId>
       <artifactId>easyb</artifactId>
+      <version>0.8.4</version>
       <exclusions>
         <exclusion>
           <groupId>org.codehaus.groovy</groupId>
@@ -87,7 +88,6 @@
           </execution>
         </executions>
         <configuration>
-          <flags>-DeasybVersion=0.8</flags>
           <!-- This makes the build a tad faster -->
           <parallel>true</parallel>
         </configuration>

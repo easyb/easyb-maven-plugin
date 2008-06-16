@@ -37,7 +37,7 @@ public class EasybExecutor {
             includedSpecs().each {File spec ->
                 arg(value: spec.getAbsolutePath())
             }
-            arg(value: '-xmleasyb')
+            arg(value: '-xml')
             arg(value: mojo.xmlReport)
             arg(value: '-txtstory')
             arg(value: mojo.storyReport)

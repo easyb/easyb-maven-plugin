@@ -94,7 +94,7 @@ public class EasybMojo extends AbstractMojo {
 
     List<String> easybDependencies() throws ArtifactResolutionException, ArtifactNotFoundException {
         List<String> dependencies = new ArrayList<String>();
-        dependencies.add(pathForDependency("org.easyb", "easyb", "0.8"));
+        dependencies.add(pathForDependency("org.easyb", "easyb", "0.8.4"));
         dependencies.add(pathForDependency("commons-cli", "commons-cli", "1.1"));
         dependencies.add(pathForDependency("org.codehaus.groovy", "groovy-all-minimal", "1.5.0"));
         return dependencies;
