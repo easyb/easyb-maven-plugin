@@ -2,6 +2,7 @@ package org.easyb.maven
 
 import org.apache.maven.plugin.MojoFailureException
 import org.codehaus.plexus.util.FileUtils
+import java.util.regex.Pattern
 
 
 public class EasybExecutor {
@@ -65,9 +66,25 @@ public class EasybExecutor {
 
     def includedSpecs() {
         def includedFiles = []
+        def matcher = areTestsFiltered() ? includeMatchingTests() : includeAllTests()
+
         mojo.includes.each {include ->
-            includedFiles += FileUtils.getFiles(mojo.easybTestDirectory, include, '')
+            def foundFiles = FileUtils.getFiles(mojo.easybTestDirectory, include, '')
+            includedFiles += foundFiles.findAll(matcher)
         }
         return includedFiles
+    }
+
+    private boolean areTestsFiltered() {
+        return mojo.test != null
+    }
+
+    private Closure includeMatchingTests() {
+        Pattern p = Pattern.compile(mojo.test)
+        return { p.matcher(it.getAbsolutePath()).find() }
+    }
+
+    private Closure includeAllTests() {
+        return { true }
     }
 }

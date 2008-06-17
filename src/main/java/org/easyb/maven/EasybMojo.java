@@ -90,6 +90,14 @@ public class EasybMojo extends AbstractMojo {
     String xmlReport;
 
     /**
+     * Optional parameter used as matcher expression to restrict the tests to run. Can match any part of the name or the path.
+     *
+     * @parameter expression="${easyb.test}"
+     * @since 0.8.4
+     */
+    String test;
+
+    /**
      * Full path to the file which should contain textual story descriptions
      *
      * @parameter expression="${project.build.directory}/easyb/stories.txt"
