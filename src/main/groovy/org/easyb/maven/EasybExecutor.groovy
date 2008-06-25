@@ -44,6 +44,9 @@ public class EasybExecutor {
             arg(value: mojo.storyReport)
         }
 
+        if (! FileUtils.fileExists(mojo.xmlReport)) 
+            throw new MojoFailureException("Missing XML report file: " + mojo.xmlReport + ". Build issue ?")
+
         def totalfailed = new XmlParser().parse(mojo.xmlReport).'@totalfailedbehaviors'
         if ('0' != totalfailed)
             throw new MojoFailureException("${totalfailed} behaviors failed")
