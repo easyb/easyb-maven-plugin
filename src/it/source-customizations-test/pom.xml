@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.easyb</groupId>
     <artifactId>maven-parent</artifactId>
-    <version>0.9-SNAPSHOT</version>
+    <version>0.9</version>
   </parent>
 
   <artifactId>source-customizations-test</artifactId>
