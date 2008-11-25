@@ -25,7 +25,7 @@ import org.apache.maven.project.MavenProject;
  *
  * @goal test
  * @phase test
- * @requiresDependencyResolution compile
+ * @requiresDependencyResolution test
  */
 @SuppressWarnings("UnusedDeclaration")
 public class EasybMojo extends AbstractMojo {
