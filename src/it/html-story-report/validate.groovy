@@ -5,9 +5,8 @@ assert storyReport.exists()
 emptyStackStory = new File(storyReport, "EmptyStackStory.html")
 assert emptyStackStory.exists()
 
-emptyStackElements = ['empty stack', 'an empty stack', 'null is pushed', 'an exception should be thrown',
-        'the stack should still be empty', 'an empty stack', 'pop is called', 'an exception should be thrown',
-        'the stack should still be empty']
+emptyStackElements = ['as a', 'i want', 'so that', 'empty stack', 'an empty stack', 'null is pushed',
+        'an exception should be thrown', 'the stack should still be empty', 'an empty stack', 'pop is called']
 
 emptyStackElements.each {element ->
     assert emptyStackStory.text.contains(element)

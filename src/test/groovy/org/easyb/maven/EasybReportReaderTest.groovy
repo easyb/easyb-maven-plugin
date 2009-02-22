@@ -10,6 +10,9 @@ class EasybReportReaderTest {
 
         Story story = reader.stories[0]
         assertEquals('empty stack', story.name)
+        assertEquals('developer', story.narrative.as_a);
+        assertEquals('the stack to behave well when I push and pop onto an empty stack', story.narrative.i_want);
+        assertEquals("I don't have to specially handle end cases", story.narrative.so_that);
 
         Scenario scenario = story.scenarios[0]
         assertEquals('success', scenario.result)

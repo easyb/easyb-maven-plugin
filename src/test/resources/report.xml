@@ -1,27 +1,33 @@
 <easyb time='Thu Mar 27 21:05:11 CDT 2008' totalbehaviors='3' totalfailedbehaviors='0' totalpendingbehaviors='0'>
   <stories scenarios='3' failedscenarios='0' pendingscenarios='0'>
     <story name='empty stack' scenarios='2' failedscenarios='1' pendingscenarios='0'>
+      <narrative name='empty stack' scenarios='0' failedscenarios='0' pendingscenarios='0'>
+        <description>empty stack</description>
+        <as_a name='developer'/>
+        <i_want name='the stack to behave well when I push and pop onto an empty stack'/>
+        <so_that name='I don&apos;t have to specially handle end cases'/>
+      </narrative>
       <scenario name='null is pushed onto empty stack' result='success'>
-        <given name='an empty stack' />
-        <when name='null is pushed' />
-        <then name='an exception should be thrown' result='success' />
-        <then name='the stack should still be empty' result='success' />
+        <given name='an empty stack'/>
+        <when name='null is pushed'/>
+        <then name='an exception should be thrown' result='success'/>
+        <then name='the stack should still be empty' result='success'/>
       </scenario>
       <scenario name='pop is called on empty stack' result='pending'>
-        <given name='an empty stack' />
-        <when name='pop is called' />
-        <then name='an exception should be thrown' result='pending' />
-        <then name='the stack should still be empty' result='pending' />
+        <given name='an empty stack'/>
+        <when name='pop is called'/>
+        <then name='an exception should be thrown' result='pending'/>
+        <then name='the stack should still be empty' result='pending'/>
       </scenario>
     </story>
     <story name='zip code' scenarios='1' failedscenarios='0' pendingscenarios='1'>
       <scenario name='invalid zip code' result='failure'>
-        <given name='an invalid zip code' />
-        <given name='the zipcodevalidator is initialized' />
-        <when name='validate is invoked with the invalid zip code' />
-        <then name='the validator instance should return false' result='failure' />
+        <given name='an invalid zip code'/>
+        <given name='the zipcodevalidator is initialized'/>
+        <when name='validate is invoked with the invalid zip code'/>
+        <then name='the validator instance should return false' result='failure'/>
       </scenario>
     </story>
   </stories>
-  <specifications specifications='0' failedspecifications='0' pendingspecifications='0' />
+  <specifications specifications='0' failedspecifications='0' pendingspecifications='0'/>
 </easyb>

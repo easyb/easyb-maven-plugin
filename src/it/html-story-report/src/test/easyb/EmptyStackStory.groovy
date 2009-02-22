@@ -1,3 +1,9 @@
+narrative "empty stack", {
+    as_a "developer"
+    i_want "the stack to behave well when I push and pop onto an empty stack"
+    so_that "I don't have to specially handle end cases"
+}
+
 scenario "null is pushed onto empty stack", {
     given "an empty stack", {}
     when "null is pushed", {}

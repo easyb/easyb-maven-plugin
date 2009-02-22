@@ -20,6 +20,15 @@ class StoryReportWriter {
             }
             body {
                 h1 'Story: ' + story.name
+                if (story.narrative != null) {
+                    h3 {
+                        div {
+                            div 'as a ' + story.narrative.as_a
+                            div 'i want ' + story.narrative.i_want
+                            div 'so that ' + story.narrative.so_that
+                        }
+                    }
+                }
                 story.scenarios.each {scenario ->
                     h3 'class': scenario.result, 'Scenario: ' + scenario.name
                     div {
