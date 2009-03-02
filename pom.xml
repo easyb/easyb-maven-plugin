@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.easyb</groupId>
     <artifactId>maven-parent</artifactId>
-    <version>0.9.3-SNAPSHOT</version>
+    <version>0.9.5-SNAPSHOT</version>
   </parent>
 
   <artifactId>maven-easyb-plugin</artifactId>
@@ -37,7 +37,7 @@
     <dependency>
       <groupId>org.easyb</groupId>
       <artifactId>easyb</artifactId>
-      <version>0.9.1</version>
+      <version>0.9.5</version>
       <exclusions>
         <exclusion>
           <groupId>org.codehaus.groovy</groupId>

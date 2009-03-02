@@ -3,7 +3,7 @@ package org.easyb.maven;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.project.MavenProject;
-import org.disco.easyb.util.CamelCaseConverter;
+import org.easyb.util.CamelCaseConverter;
 
 import java.io.File;
 import java.io.FileInputStream;

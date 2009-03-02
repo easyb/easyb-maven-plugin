@@ -26,7 +26,7 @@ public class EasybExecutor {
 
         makeReportDirectories()
 
-        new AntBuilder(new AntProject()).java(classname: 'org.disco.easyb.BehaviorRunner', fork: true) {
+        new AntBuilder(new AntProject()).java(classname: 'org.easyb.BehaviorRunner', fork: true) {
             classpath() {
                 mojo.project.getTestClasspathElements().each {element ->
                     pathelement(location: element)
