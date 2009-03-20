@@ -3,12 +3,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.easyb</groupId>
-    <artifactId>maven-parent</artifactId>
-    <version>0.9.5.2</version>
-  </parent>
-
+  <groupId>org.easyb</groupId>
   <artifactId>missing-story-directory-test</artifactId>
   <version>testing</version>
   <description>Tests that the plugin doesn't fail the build when the easyb test directory does not exist</description>

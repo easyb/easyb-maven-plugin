@@ -3,18 +3,20 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.easyb</groupId>
-    <artifactId>maven-parent</artifactId>
-    <version>0.9.5.2</version>
-  </parent>
-
+  <groupId>org.easyb</groupId>
   <artifactId>site-examples-test</artifactId>
   <version>testing</version>
   <description>Tests the examples from the easyb site</description>
 
   <build>
     <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.easyb</groupId>
         <artifactId>maven-easyb-plugin</artifactId>
