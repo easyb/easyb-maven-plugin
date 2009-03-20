@@ -40,7 +40,7 @@ public class EasybExecutor {
             }
             arg(value: '-xml')
             arg(value: mojo.xmlReport)
-            arg(value: '-txtstory')
+            arg(value: "-$mojo.storyType")
             arg(value: mojo.storyReport)
         }
 

@@ -98,7 +98,14 @@ public class EasybMojo extends AbstractMojo {
     String test;
 
     /**
-     * Full path to the file which should contain textual story descriptions
+     * Type of story reports to be written as html
+     *
+     * @parameter expression="txtstory"
+     */
+    String storyType;
+
+    /**
+     * Full path to the file where the story report should be written
      *
      * @parameter expression="${project.build.directory}/easyb/stories.txt"
      * @required
