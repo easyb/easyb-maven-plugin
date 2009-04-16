@@ -128,6 +128,13 @@ public class EasybMojo extends AbstractMojo {
      */
     List<String> includes;
 
+    /**
+     * Run easyb specs in parallel
+     * 
+     * @parameter
+     */
+    boolean parallel;
+
     public void execute() throws MojoExecutionException, MojoFailureException {
         buildExecutor().execute();
     }

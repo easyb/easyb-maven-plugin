@@ -38,6 +38,9 @@ public class EasybExecutor {
             includedSpecs().each {File spec ->
                 arg(value: spec.getAbsolutePath())
             }
+            if (mojo.parallel) {
+                arg(value: '-parallel')
+            }
             arg(value: '-xml')
             arg(value: mojo.xmlReport)
             arg(value: "-$mojo.storyType")

@@ -37,13 +37,7 @@
     <dependency>
       <groupId>org.easyb</groupId>
       <artifactId>easyb</artifactId>
-      <version>0.9.5.2</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.codehaus.groovy</groupId>
-          <artifactId>groovy-all-minimal</artifactId>
-        </exclusion>
-      </exclusions>
+      <version>0.9.6</version>
     </dependency>
 
     <dependency>
