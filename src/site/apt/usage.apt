@@ -32,7 +32,7 @@ Usage
       <plugin>
         <groupId>org.easyb</groupId>
         <artifactId>maven-easyb-plugin</artifactId>
-        <version>testing</version>
+        <version>0.9.6</version>
         <executions>
           <execution>
             <goals>
@@ -58,15 +58,18 @@ Usage
       <plugin>
         <groupId>org.easyb</groupId>
         <artifactId>maven-easyb-plugin</artifactId>
-        <version>testing</version>
+        <version>0.9.6</version>
         <executions>
           <execution>
             <goals>
               <goal>test</goal>
-              <goal>storyReport</goal>
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <storyType>html</storyType>
+          <storyReport>${project.build.directory}/easyb/stories.html</storyReport>
+        </configuration>
       </plugin>
     </plugins>
   </build>
