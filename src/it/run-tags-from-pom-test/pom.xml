@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.easyb</groupId>
+  <artifactId>parallel-test</artifactId>
+  <version>testing</version>
+  <description>Tests that parallel run speeds up run</description>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.easyb</groupId>
+        <artifactId>maven-easyb-plugin</artifactId>
+        <version>testing</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <xmlReport>${project.build.directory}/easyb-report.xml</xmlReport>
+          <parallel>true</parallel>
+          <tags>runme</tags>
+          <!--<parallelThreadCount>10</parallelThreadCount>-->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

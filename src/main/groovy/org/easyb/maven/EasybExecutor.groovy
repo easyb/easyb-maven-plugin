@@ -41,6 +41,12 @@ public class EasybExecutor {
             if (mojo.parallel) {
                 arg(value: '-parallel')
             }
+
+            if (mojo.tags) {
+                arg(value: '-tags')
+                arg(value: mojo.tags)
+            }
+
             arg(value: '-xml')
             arg(value: mojo.xmlReport)
             arg(value: "-$mojo.storyType")

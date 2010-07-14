@@ -98,6 +98,13 @@ public class EasybMojo extends AbstractMojo {
     String test;
 
     /**
+     * Optional parameter to run only stories matching tags in the supplied list.  A single or comma-delimited list of tag names.
+     *
+     * @parameter expression="${easyb.tags}"
+     */
+    String tags;
+
+    /**
      * Type of story reports to be written as html
      *
      * @parameter expression="txtstory"
