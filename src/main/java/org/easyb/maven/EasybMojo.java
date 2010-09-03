@@ -90,6 +90,14 @@ public class EasybMojo extends AbstractMojo {
     String xmlReport;
 
     /**
+     * Full path to the directory in which JUnit XML reports will be generated
+     *
+     * @parameter expression="${project.build.directory}/surefire-reports"
+     * @required
+     */
+    String junitReport;
+
+    /**
      * Optional parameter used as matcher expression to restrict the tests to run. Can match any part of the name or the path.
      *
      * @parameter expression="${easyb.test}"

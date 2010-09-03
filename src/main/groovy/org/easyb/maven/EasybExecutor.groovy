@@ -51,6 +51,8 @@ public class EasybExecutor {
             arg(value: mojo.xmlReport)
             arg(value: "-$mojo.storyType")
             arg(value: mojo.storyReport)
+            arg(value: '-junit')
+            arg(value: mojo.junitReport)
         }
 
         if (! FileUtils.fileExists(mojo.xmlReport)) 
