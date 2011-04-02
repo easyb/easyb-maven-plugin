@@ -165,7 +165,7 @@ public class EasybMojo extends AbstractMojo {
             Artifact artifact = (Artifact) artifacts.next();
 
             if ("org.easyb".equals(artifact.getGroupId())
-                && "easyb".equals(artifact.getArtifactId())) {
+                && "easyb-core".equals(artifact.getArtifactId())) {
                 easybArtifact = artifact;
             }
         }

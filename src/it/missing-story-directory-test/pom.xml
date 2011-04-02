@@ -13,7 +13,7 @@
       <plugin>
         <groupId>org.easyb</groupId>
         <artifactId>maven-easyb-plugin</artifactId>
-        <version>testing</version>
+        <version>@project.version@</version>
         <executions>
           <execution>
             <goals>
