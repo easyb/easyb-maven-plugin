@@ -1,2 +1,5 @@
 target
 build.log
+
+/.idea/
+/maven-easyb-plugin.iml
