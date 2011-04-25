@@ -128,6 +128,22 @@ public class EasybMojo extends AbstractMojo {
     String storyReport;
 
     /**
+     * The base URL of the issue tracking system.
+     * If specified, any tags starting with '#' will be considered to be an issue id,
+     * and a corresponding link will be included in the HTML report
+     *
+     * @parameter expression="issueSystemBaseUrl"
+     */
+    String issueSystemBaseUrl;
+
+    /**
+     * The (optional) heading to go on the issue system tag column
+     *
+     * @parameter expression="issueSystemHeading"
+     */
+    String issueSystemHeading;
+
+    /**
      * The directory to be scanned for easyb behaviors
      *
      * @parameter expression="${project.basedir}/src/test/easyb"

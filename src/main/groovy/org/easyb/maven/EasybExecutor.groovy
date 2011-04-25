@@ -47,6 +47,15 @@ public class EasybExecutor {
                 arg(value: mojo.tags)
             }
 
+            if (mojo.issueSystemBaseUrl) {
+                arg(value: '-issueSystemBaseUrl')
+                arg(value: mojo.issueSystemBaseUrl)
+            }
+            if (mojo.issueSystemHeading) {
+                arg(value: '-issueSystemHeading')
+                arg(value: mojo.issueSystemHeading)
+            }
+
             arg(value: '-xml')
             arg(value: mojo.xmlReport)
             arg(value: "-$mojo.storyType")

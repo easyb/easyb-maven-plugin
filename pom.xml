@@ -41,7 +41,7 @@
 		<dependency>
 			<groupId>org.easyb</groupId>
 			<artifactId>easyb-core</artifactId>
-			<version>1.1</version>
+			<version>1.2-SNAPSHOT</version>
 			<exclusions>
 				<exclusion>
 					<groupId>ant</groupId>
@@ -68,7 +68,7 @@
 				<version>1.5</version>
 				<configuration>
 					<projectsDirectory>src/it</projectsDirectory>
-					<postBuildHookScript>verify.groovy</postBuildHookScript>
+					<postBuildHookScript>validate.groovy</postBuildHookScript>
 				</configuration>
 				<executions>
 					<execution>
