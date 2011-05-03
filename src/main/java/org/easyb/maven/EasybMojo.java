@@ -87,7 +87,7 @@ public class EasybMojo extends AbstractMojo {
      * @parameter expression="${project.build.directory}/easyb/report.xml"
      * @required
      */
-    String xmlReport;
+    private String xmlReport;
 
     /**
      * Full path to the directory in which JUnit XML reports will be generated
@@ -95,7 +95,7 @@ public class EasybMojo extends AbstractMojo {
      * @parameter expression="${project.build.directory}/surefire-reports"
      * @required
      */
-    String junitReport;
+    private String junitReport;
 
     /**
      * Optional parameter used as matcher expression to restrict the tests to run. Can match any part of the name or the path.
@@ -103,21 +103,21 @@ public class EasybMojo extends AbstractMojo {
      * @parameter expression="${easyb.test}"
      * @since 0.8.4
      */
-    String test;
+    private String test;
 
     /**
      * Optional parameter to run only stories matching tags in the supplied list.  A single or comma-delimited list of tag names.
      *
      * @parameter expression="${easyb.tags}"
      */
-    String tags;
+    private String tags;
 
     /**
      * Type of story reports to be written as html
      *
      * @parameter expression="txtstory"
      */
-    String storyType;
+    private String storyType;
 
     /**
      * Full path to the file where the story report should be written
@@ -125,7 +125,7 @@ public class EasybMojo extends AbstractMojo {
      * @parameter expression="${project.build.directory}/easyb/stories.txt"
      * @required
      */
-    String storyReport;
+    private String storyReport;
 
     /**
      * The base URL of the issue tracking system.
@@ -134,14 +134,25 @@ public class EasybMojo extends AbstractMojo {
      *
      * @parameter expression="issueSystemBaseUrl"
      */
-    String issueSystemBaseUrl;
+    private String issueSystemBaseUrl;
 
     /**
      * The (optional) heading to go on the issue system tag column
      *
      * @parameter expression="issueSystemHeading"
      */
-    String issueSystemHeading;
+    private String issueSystemHeading;
+
+    /**
+     * The (optional) project prefix used in issue IDs.
+     * In some issue tracking systems (such as JIRA), the project name or code is part of the issue IDs
+     * (e.g. 'MYPROJECT-!23'). If you specify this prefix, it will be added before the issue number in
+     * the issue tracking link in the reports.
+     *
+     *
+     * @parameter
+     */
+    private String issueSystemProjectPrefix;
 
     /**
      * The directory to be scanned for easyb behaviors
@@ -149,7 +160,7 @@ public class EasybMojo extends AbstractMojo {
      * @parameter expression="${project.basedir}/src/test/easyb"
      * @required
      */
-    File easybTestDirectory;
+    private File easybTestDirectory;
 
     /**
      * Ant path-style expression of files to run as story tests.
@@ -157,14 +168,14 @@ public class EasybMojo extends AbstractMojo {
      *
      * @parameter
      */
-    List<String> includes;
+    private List<String> includes;
 
     /**
      * Run easyb specs in parallel
      * 
      * @parameter
      */
-    boolean parallel;
+    private boolean parallel;
 
     public void execute() throws MojoExecutionException, MojoFailureException {
         buildExecutor().execute();

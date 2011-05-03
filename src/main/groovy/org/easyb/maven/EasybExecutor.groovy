@@ -55,6 +55,10 @@ public class EasybExecutor {
                 arg(value: '-issueSystemHeading')
                 arg(value: mojo.issueSystemHeading)
             }
+            if (mojo.issueSystemProjectPrefix) {
+                arg(value: '-issueSystemProjectPrefix')
+                arg(value: mojo.issueSystemProjectPrefix)
+            }
 
             arg(value: '-xml')
             arg(value: mojo.xmlReport)
