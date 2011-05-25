@@ -186,7 +186,7 @@ public class EasybMojo extends AbstractMojo {
             easybArtifact.getVersion(), Artifact.SCOPE_COMPILE, easybArtifact.getType());
 
         ArtifactResolutionResult resolutionResult =
-            resolver.resolveTransitively(singleton(easybArtifact), mojoArtifact, EMPTY_LIST, localRepository, metadataSource);
+            resolver.resolveTransitively(singleton(easybArtifact), mojoArtifact, remoteRepositories, localRepository, metadataSource);
 
         getLog().debug("Using easyb " + easybArtifact);
 
