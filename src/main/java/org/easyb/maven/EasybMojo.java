@@ -120,6 +120,13 @@ public class EasybMojo extends AbstractMojo {
     String storyType;
 
     /**
+     * Command line options to be passed to easyb
+     *
+     * @parameter
+     */
+    private String jvmArguments;
+
+    /**
      * Full path to the file where the story report should be written
      *
      * @parameter expression="${project.build.directory}/easyb/stories.txt"
