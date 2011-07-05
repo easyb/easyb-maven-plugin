@@ -46,13 +46,15 @@ public class EasybExecutor {
                 arg(value: '-tags')
                 arg(value: mojo.tags)
             }
-
             arg(value: '-xml')
             arg(value: mojo.xmlReport)
             arg(value: "-$mojo.storyType")
             arg(value: mojo.storyReport)
             arg(value: '-junit')
             arg(value: mojo.junitReport)
+            if (mojo.jvmArguments) {
+                jvmarg(value: mojo.jvmArguments)
+            }
         }
 
         if (! FileUtils.fileExists(mojo.xmlReport)) 
