@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.easyb</groupId>
-  <artifactId>parallel-test</artifactId>
+  <artifactId>pass-jvm-arguments-into-test</artifactId>
   <version>testing</version>
-  <description>Tests that parallel run speeds up run</description>
+  <description>Tests that JVM parameters can be passed in to easyb</description>
 
   <build>
     <plugins>
