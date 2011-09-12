@@ -53,7 +53,9 @@ public class EasybExecutor {
             arg(value: '-junit')
             arg(value: mojo.junitReport)
             if (mojo.jvmArguments) {
-                jvmarg(value: mojo.jvmArguments)
+                mojo.jvmArguments.split().each {argument ->
+                    jvmarg(value: argument)
+                }
             }
         }
 
