@@ -53,14 +53,16 @@ public class EasybExecutor {
             arg(value: '-junit')
             arg(value: mojo.junitReport)
             if (mojo.jvmArguments) {
-                jvmarg(value: mojo.jvmArguments)
+                mojo.jvmArguments.split().each {argument ->
+                    jvmarg(value: argument)
+                }
             }
         }
 
         if (! FileUtils.fileExists(mojo.xmlReport)) 
             throw new MojoFailureException("Missing XML report file: " + mojo.xmlReport + ". Build issue ?")
 
-        def totalfailed = new XmlParser().parse(mojo.xmlReport).'@totalfailedbehaviors'
+        def totalfailed = new XmlParser().parseText(new File(mojo.xmlReport).getText("utf-8")).'@totalfailedbehaviors'
         if ('0' != totalfailed)
             throw new MojoFailureException("${totalfailed} behaviors failed")
     }
