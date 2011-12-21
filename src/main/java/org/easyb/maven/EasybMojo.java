@@ -157,6 +157,18 @@ public class EasybMojo extends AbstractMojo {
      */
     boolean parallel;
 
+    /**
+     * The total number of batches being run if the behaviors are being split into batches.
+     * @parameter expression="${easyb.batch.count}" default-value=0
+     */
+    private Integer batchCount;
+
+    /**
+     * The number of the batch to be run here if the behaviors are being split into batches.
+     * @parameter expression="${easyb.batch.number}" default-value=0
+     */
+    private Integer batchNumber;
+
     public void execute() throws MojoExecutionException, MojoFailureException {
         buildExecutor().execute();
     }

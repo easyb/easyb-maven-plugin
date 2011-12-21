@@ -46,6 +46,15 @@ public class EasybExecutor {
                 arg(value: '-tags')
                 arg(value: mojo.tags)
             }
+
+            if ((mojo.batchCount) && (mojo.batchNumber)) {
+                arg(value: '-batchCount')
+                arg(value: mojo.batchCount)
+
+                arg(value: '-batchNumber')
+                arg(value: mojo.batchNumber)
+            }
+
             arg(value: '-xml')
             arg(value: mojo.xmlReport)
             arg(value: "-$mojo.storyType")
