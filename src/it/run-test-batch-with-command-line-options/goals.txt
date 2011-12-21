@@ -1,0 +1,1 @@
+clean install -Deasyb.batch.count=3 -Deasyb.batch.number=1

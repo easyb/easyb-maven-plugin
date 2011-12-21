@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.easyb</groupId>
+  <artifactId>run-test-batch-test</artifactId>
+  <version>testing</version>
+  <description>Tests running batches of behaviors</description>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.easyb</groupId>
+        <artifactId>maven-easyb-plugin</artifactId>
+        <version>@project.version@</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <xmlReport>${project.build.directory}/easyb-report.xml</xmlReport>
+          <batchCount>3</batchCount>
+          <batchNumber>1</batchNumber>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
