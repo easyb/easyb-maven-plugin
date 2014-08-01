@@ -122,7 +122,7 @@ public class EasybMojo extends AbstractMojo {
     /**
      * Command line options to be passed to easyb
      *
-     * @parameter
+     * @parameter expression="${easyb.jvm.arguments}"
      */
     private String jvmArguments;
 
